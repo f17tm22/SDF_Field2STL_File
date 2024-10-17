@@ -17,6 +17,6 @@ g++ -std=c++17 final_main.cpp -o final_main
 4. 将读入的三维带sdfValues的离散点存入data中，去除无穷大坐标点
 5. 从data中分离出唯一的x, y, z坐标，用于后续生成sdfGrid三维网格
 6. 打表枚举256种线性插值情况，用marchingCubes算法在小立方体棱上插值
-7. 用分治优化bowyerWatson算法，将原来的O($N^2$)优化为O($NlogN$)，核心思路就是Delauncy三角剖分
+7. 用分治优化bowyerWatson算法，将原来的O($N^2$)优化为O($NlogN$)，核心思路就是Delaunay三角剖分
 8. 将三角剖分出来的四面体Tetrahedron拆成四个Triangle
 9. 将Triangle以ASCII格式输出stl文件
